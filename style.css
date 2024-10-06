@@ -20,6 +20,17 @@ main {
   gap: 1rem;
 }
 
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+box-icon {
+  color: white;
+}
+
 .nav-container {
   z-index: 10;
   display: flex;
@@ -35,7 +46,7 @@ main {
 
 .nav-links {
   font-family: "Andale Mono", monospace;
-  color: rgba(112, 135, 255, 0.85);
+  color: rgb(112, 135, 255);
   text-shadow: rgba(0, 32, 255, 0.32) 3px 3px 30px;
   font-size: 0.8rem;
   animation: glowing-links 2s forwards;
@@ -74,7 +85,7 @@ h1 {
     text-shadow: none;
   }
   100% {
-    color: rgba(112, 135, 255, 0.85);
+    color: rgb(112, 135, 255);
     text-shadow: rgba(0, 32, 255, 0.32) 3px 3px 30px;
   }
 }
@@ -128,7 +139,7 @@ h1 {
   align-items: flex-end;
   width: 90%;
   height: 0;
-  background-color: rgba(0, 0, 0, 0.63);
+  background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
 }
 
@@ -145,8 +156,8 @@ h1 {
   }
 }
 img {
-  height: 7rem;
-  width: 10rem;
+  height: 9rem;
+  width: 13rem;
 }
 
 .close-button {
@@ -161,6 +172,12 @@ img {
   font-size: 0.7rem;
   position: sticky;
   top: 0.5rem;
+}
+
+.project-title {
+  color: #ffff93;
+  font-family: "Andale Mono", monospace;
+  text-shadow: rgba(255, 255, 0, 0.61) 3px 3px 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

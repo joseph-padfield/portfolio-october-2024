@@ -1,6 +1,7 @@
 const projectBox = document.querySelector('.project-container')
 const projectImg = document.querySelectorAll('.project-img')
 const closeButton = document.querySelector('.close-button')
+const icon = document.querySelector('.icon')
 document.querySelector('.projects').addEventListener('click', () => {
     projectBox.classList.toggle('animate-box')
 
@@ -15,4 +16,8 @@ document.querySelector('.close-button').addEventListener('click', () => {
     projectImg.forEach(img => {  // Iterate over the NodeList
         img.classList.toggle('animate-img')
     })
+})
+
+icon.querySelector('.icon').addEventListener('hover', () => {
+
 })
