@@ -27,10 +27,6 @@ nav {
   align-items: center;
 }
 
-box-icon {
-  color: white;
-}
-
 .nav-container {
   z-index: 10;
   display: flex;
@@ -76,17 +72,29 @@ box-icon {
 h1 {
   font-size: 1.2rem;
   font-family: "Andale Mono", monospace;
+  color: rgb(112, 135, 255);
+  text-shadow: rgba(0, 32, 255, 0.32) 3px 3px 30px;
   animation: glowing-text 5s forwards;
 }
 
 @keyframes glowing-text {
   0% {
-    color: rgba(90, 255, 0, 0);
-    text-shadow: none;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  6% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  13% {
+    opacity: 0;
   }
   100% {
-    color: rgb(112, 135, 255);
-    text-shadow: rgba(0, 32, 255, 0.32) 3px 3px 30px;
+    opacity: 1;
   }
 }
 @keyframes glowing-links {
@@ -129,7 +137,64 @@ h1 {
 }
 .project-container {
   position: absolute;
-  top: 5%;
+  top: 10%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  width: 90%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  overflow: hidden;
+}
+
+.animate-box {
+  overflow: scroll;
+  animation: open-box 1s forwards;
+}
+
+@keyframes open-box {
+  100% {
+    height: 70%;
+    padding: 0.5rem;
+    border: rgba(255, 255, 255, 0.15) solid 1px;
+  }
+}
+img {
+  height: 9rem;
+  width: 13rem;
+  border: rgba(255, 255, 255, 0.17) solid 1px;
+}
+
+.close-button {
+  color: rgb(112, 135, 255);
+  text-shadow: rgba(0, 32, 255, 0.32) 3px 3px 30px;
+  font-family: "Andale Mono", monospace;
+  margin: 0.2rem;
+  text-wrap: nowrap;
+  width: 100%;
+  text-align: end;
+  text-decoration: underline;
+  font-size: 0.7rem;
+  position: sticky;
+  top: 0.5rem;
+}
+
+.close-button:hover {
+  color: #ffff93;
+  text-shadow: yellow 3px 3px 30px;
+}
+
+.project-title {
+  color: #ffff93;
+  font-family: "Andale Mono", monospace;
+  text-shadow: rgba(255, 255, 0, 0.61) 3px 3px 10px;
+}
+
+.about-container {
+  position: absolute;
+  top: 10%;
   z-index: 10;
   display: flex;
   flex-direction: row;
@@ -142,27 +207,15 @@ h1 {
   background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
 }
-
-.animate-box {
-  overflow: scroll;
-  animation: open-box 1s forwards;
-}
-
-@keyframes open-box {
-  100% {
-    height: 80%;
-    padding: 0.5rem;
-    border: rgba(255, 255, 255, 0.15) solid 1px;
-  }
-}
-img {
-  height: 9rem;
-  width: 13rem;
-}
-
-.close-button {
+.about-container p {
   color: #ffff93;
-  text-shadow: yellow 3px 3px 30px;
+  font-family: "Andale Mono", monospace;
+  text-shadow: rgba(255, 255, 0, 0.61) 3px 3px 10px;
+}
+
+.close-about-button {
+  color: rgb(112, 135, 255);
+  text-shadow: rgba(0, 32, 255, 0.32) 3px 3px 30px;
   font-family: "Andale Mono", monospace;
   margin: 0.2rem;
   text-wrap: nowrap;
@@ -174,10 +227,9 @@ img {
   top: 0.5rem;
 }
 
-.project-title {
+.close-about-button:hover {
   color: #ffff93;
-  font-family: "Andale Mono", monospace;
-  text-shadow: rgba(255, 255, 0, 0.61) 3px 3px 10px;
+  text-shadow: yellow 3px 3px 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

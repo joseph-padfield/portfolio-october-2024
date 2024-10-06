@@ -34,10 +34,6 @@ nav {
   align-items: center;
 }
 
-box-icon {
-  color: white;
-}
-
 .nav-container {
   z-index: 10;
   display: flex;
@@ -83,17 +79,29 @@ box-icon {
 h1 {
   font-size: 1.2rem;
   font-family: "Andale Mono", monospace;
+  color: $title-text-color;
+  text-shadow: $title-text-glow 3px 3px 30px;
   animation: glowing-text 5s forwards;
 }
 
 @keyframes glowing-text {
   0% {
-    color: $title-text-initial-color;
-    text-shadow: none;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  6% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  13% {
+    opacity: 0;
   }
   100% {
-    color: $title-text-color;
-    text-shadow: $title-text-glow 3px 3px 30px;
+    opacity: 1;
   }
 }
 
@@ -138,17 +146,15 @@ opacity: 1;
 
 .project-container {
   position: absolute;
-  top: 5%;
+  top: 10%;
   z-index: 10;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 3rem;
-  justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   width: 90%;
   height: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.65);
   overflow: hidden;
 }
 
@@ -159,7 +165,7 @@ opacity: 1;
 
 @keyframes open-box {
   100% {
-    height: 80%;
+    height: 70%;
     padding: 0.5rem;
     border: rgba(255, 255, 255, 0.15) solid 1px;
   }
@@ -168,11 +174,12 @@ opacity: 1;
 img {
   height: 9rem;
   width: 13rem;
+  border: rgba(255, 255, 255, 0.17) solid 1px;
  }
 
 .close-button {
-  color: #ffff93;
-  text-shadow: yellow 3px 3px 30px;
+  color: $title-text-color;
+  text-shadow: $title-text-glow 3px 3px 30px;
   font-family: "Andale Mono", monospace;
   margin: 0.2rem;
   text-wrap: nowrap;
@@ -184,11 +191,57 @@ img {
   top: 0.5rem;
 }
 
+.close-button:hover {
+  color: #ffff93;
+  text-shadow: yellow 3px 3px 30px;
+}
+
 .project-title {
   color: #ffff93;
   font-family: "Andale Mono", monospace;
   text-shadow: rgba(255, 255, 0, 0.61) 3px 3px 10px;
 }
+
+.about-container {
+  position: absolute;
+  top: 10%;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  align-items: flex-end;
+  width: 90%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  p {
+    color: #ffff93;
+    font-family: "Andale Mono", monospace;
+    text-shadow: rgba(255, 255, 0, 0.61) 3px 3px 10px;
+  }
+}
+
+.close-about-button {
+  color: $title-text-color;
+  text-shadow: $title-text-glow 3px 3px 30px;
+  font-family: "Andale Mono", monospace;
+  margin: 0.2rem;
+  text-wrap: nowrap;
+  width: 100%;
+  text-align: end;
+  text-decoration: underline;
+  font-size: 0.7rem;
+  position: sticky;
+  top: 0.5rem;
+}
+
+.close-about-button:hover {
+  color: #ffff93;
+  text-shadow: yellow 3px 3px 30px;
+}
+
 
 
 
