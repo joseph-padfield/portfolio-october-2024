@@ -12,6 +12,7 @@ html {
 body {
   background-color: #0b0b0b;
   width: 100vw;
+  min-width: 375px;
   height: 100vh;
   margin: 0;
   padding: 4rem 0;
@@ -53,7 +54,7 @@ nav {
   font-family: "Andale Mono", monospace;
   color: $title-text-color;
   text-shadow: $title-text-glow 3px 3px 30px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   animation: glowing-links 2s forwards;
 }
 
@@ -73,13 +74,14 @@ nav {
   background-color: $title-container-background-color;
   height: fit-content;
   width: fit-content;
+  min-wideth: 350px;
   border-radius: 5px;
   box-shadow: $inset-box-shadow-effect;
   padding: 1rem;
 }
 
 h1 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: "Andale Mono", monospace;
   color: $title-text-color;
   text-shadow: $title-text-glow 3px 3px 30px;
@@ -152,12 +154,12 @@ opacity: 1;
   z-index: 10;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1rem;
   align-items: center;
   width: 90%;
   max-width: 400px;
   height: 0;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
 }
 
@@ -175,8 +177,8 @@ opacity: 1;
 }
 
 img {
-  height: 9rem;
-  width: 13rem;
+  height: 10rem;
+  width: 14rem;
   border: rgba(255, 255, 255, 0.17) solid 1px;
  }
 
@@ -199,9 +201,18 @@ img {
   text-shadow: yellow 3px 3px 30px;
 }
 
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
 .project-title {
   color: #ffff93;
   font-family: "Andale Mono", monospace;
+  font-size: 1.2rem;
   text-shadow: rgba(255, 255, 0, 0.61) 3px 3px 10px;
 }
 
@@ -215,7 +226,7 @@ img {
   gap: 3rem;
   justify-content: center;
   align-items: flex-end;
-width:350px;
+  width:350px;
   height: 0;
   background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
@@ -266,6 +277,7 @@ width:350px;
   gap: 3rem;
   position: absolute;
   bottom: 10rem;
+  align-items: center;
 }
 
 
