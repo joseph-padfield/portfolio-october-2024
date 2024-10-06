@@ -3,77 +3,164 @@ html {
 }
 
 body {
-  background-color: #000000;
+  background-color: #0b0b0b;
   width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 4rem 0;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  justify-content: left;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
 }
 
 .nav-container {
+  z-index: 10;
   display: flex;
   flex-direction: row;
-  gap: 4rem;
-  background-color: #0c0c0c;
+  gap: 2rem;
+  background-color: rgba(35, 35, 35, 0.44);
   height: fit-content;
   width: fit-content;
   border-radius: 5px;
-  box-shadow: 15px 15px 30px rgb(0, 0, 0) inset, -2px -2px 10px rgba(0, 0, 0, 0.59) inset, -2px -2px 10px rgba(92, 92, 92, 0.36);
+  box-shadow: 15px 15px 30px rgb(0, 0, 0) inset, -2px -2px 10px rgb(0, 0, 0) inset, -8px -8px 20px rgb(21, 21, 21);
   padding: 1rem;
 }
 
 .nav-links {
   font-family: "Andale Mono", monospace;
-  animation: flashing-glow 10s forwards;
+  color: rgba(112, 135, 255, 0.85);
+  text-shadow: rgba(0, 32, 255, 0.32) 3px 3px 30px;
   font-size: 0.8rem;
+  animation: glowing-links 2s forwards;
+}
+
+.nav-links:hover {
+  color: #ffff93;
+  text-shadow: yellow 3px 3px 30px;
 }
 
 .title-container {
+  position: absolute;
+  top: 40%;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #0c0c0c;
+  background-color: rgba(35, 35, 35, 0.44);
   height: fit-content;
   width: fit-content;
   border-radius: 5px;
-  box-shadow: 15px 15px 30px rgb(0, 0, 0) inset, -2px -2px 10px rgba(0, 0, 0, 0.59) inset, -2px -2px 10px rgba(92, 92, 92, 0.36);
+  box-shadow: 15px 15px 30px rgb(0, 0, 0) inset, -2px -2px 10px rgb(0, 0, 0) inset, -8px -8px 20px rgb(21, 21, 21);
   padding: 1rem;
-}
-
-.another-container {
-  background-color: #000000;
-  height: fit-content;
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  box-shadow: 5px 5px 30px 50px rgba(0, 0, 0, 0.9) inset, 5px 5px 30px 50px rgb(0, 0, 0) inset;
-  padding: 3.5rem;
 }
 
 h1 {
   font-size: 1.2rem;
   font-family: "Andale Mono", monospace;
-  animation: flashing-glow 5s forwards;
+  animation: glowing-text 5s forwards;
 }
 
-@keyframes flashing-glow {
+@keyframes glowing-text {
   0% {
     color: rgba(90, 255, 0, 0);
     text-shadow: none;
   }
   100% {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(112, 135, 255, 0.85);
     text-shadow: rgba(0, 32, 255, 0.32) 3px 3px 30px;
   }
+}
+@keyframes glowing-links {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  6% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  13% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  81% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  91% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.project-container {
+  position: absolute;
+  top: 5%;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  align-items: flex-end;
+  width: 90%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.63);
+  overflow: hidden;
+}
+
+.animate-box {
+  overflow: scroll;
+  animation: open-box 1s forwards;
+}
+
+@keyframes open-box {
+  100% {
+    height: 80%;
+    padding: 0.5rem;
+    border: rgba(255, 255, 255, 0.15) solid 1px;
+  }
+}
+img {
+  height: 7rem;
+  width: 10rem;
+}
+
+.close-button {
+  color: #ffff93;
+  text-shadow: yellow 3px 3px 30px;
+  font-family: "Andale Mono", monospace;
+  margin: 0.2rem;
+  text-wrap: nowrap;
+  width: 100%;
+  text-align: end;
+  text-decoration: underline;
+  font-size: 0.7rem;
+  position: sticky;
+  top: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
