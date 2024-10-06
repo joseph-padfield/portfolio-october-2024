@@ -28,10 +28,12 @@ nav {
 }
 
 .nav-container {
+  position: absolute;
+  top: 9rem;
   z-index: 10;
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 4rem;
   background-color: rgba(35, 35, 35, 0.44);
   height: fit-content;
   width: fit-content;
@@ -44,7 +46,7 @@ nav {
   font-family: "Andale Mono", monospace;
   color: rgb(112, 135, 255);
   text-shadow: rgba(0, 32, 255, 0.32) 3px 3px 30px;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   animation: glowing-links 2s forwards;
 }
 
@@ -70,7 +72,7 @@ nav {
 }
 
 h1 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: "Andale Mono", monospace;
   color: rgb(112, 135, 255);
   text-shadow: rgba(0, 32, 255, 0.32) 3px 3px 30px;
@@ -246,6 +248,13 @@ img {
 .close-about-button:hover {
   color: #ffff93;
   text-shadow: yellow 3px 3px 30px;
+}
+
+.social-links {
+  display: flex;
+  gap: 3rem;
+  position: absolute;
+  bottom: 10rem;
 }
 
 /*# sourceMappingURL=style.css.map */

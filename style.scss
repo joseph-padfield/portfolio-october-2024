@@ -35,10 +35,12 @@ nav {
 }
 
 .nav-container {
+  position: absolute;
+  top: 9rem;
   z-index: 10;
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 4rem;
   background-color: $title-container-background-color;
   height: fit-content;
   width: fit-content;
@@ -51,7 +53,7 @@ nav {
   font-family: "Andale Mono", monospace;
   color: $title-text-color;
   text-shadow: $title-text-glow 3px 3px 30px;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   animation: glowing-links 2s forwards;
 }
 
@@ -77,7 +79,7 @@ nav {
 }
 
 h1 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: "Andale Mono", monospace;
   color: $title-text-color;
   text-shadow: $title-text-glow 3px 3px 30px;
@@ -257,6 +259,13 @@ width:350px;
 .close-about-button:hover {
   color: #ffff93;
   text-shadow: yellow 3px 3px 30px;
+}
+
+.social-links {
+  display: flex;
+  gap: 3rem;
+  position: absolute;
+  bottom: 10rem;
 }
 
 
