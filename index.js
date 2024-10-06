@@ -11,7 +11,7 @@ document.querySelector('.projects').addEventListener('click', () => {
 })
 
 document.querySelector('.about').addEventListener('click', () => {
-    aboutBox.classList.toggle('animate-box')
+    aboutBox.classList.toggle('animate-about-box')
 })
 
 document.querySelector('.close-button').addEventListener('click', () => {
@@ -23,7 +23,7 @@ document.querySelector('.close-button').addEventListener('click', () => {
 })
 
 document.querySelector('.close-about-button').addEventListener('click', () => {
-    aboutBox.classList.toggle('animate-box')
+    aboutBox.classList.toggle('animate-about-box')
 })
 
 

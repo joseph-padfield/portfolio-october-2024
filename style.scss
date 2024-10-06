@@ -153,6 +153,7 @@ opacity: 1;
   gap: 3rem;
   align-items: center;
   width: 90%;
+  max-width: 400px;
   height: 0;
   background-color: rgba(0, 0, 0, 0.65);
   overflow: hidden;
@@ -212,7 +213,7 @@ img {
   gap: 3rem;
   justify-content: center;
   align-items: flex-end;
-  width: 90%;
+width:350px;
   height: 0;
   background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
@@ -220,6 +221,22 @@ img {
     color: #ffff93;
     font-family: "Andale Mono", monospace;
     text-shadow: rgba(255, 255, 0, 0.61) 3px 3px 10px;
+  }
+  .box-header {
+    font-size: 1.5rem;
+  }
+}
+
+.animate-about-box {
+  overflow: scroll;
+  animation: open-about-box 1s forwards;
+}
+
+@keyframes open-about-box {
+  100% {
+    height: 75%;
+    padding: 0.5rem;
+    border: rgba(255, 255, 255, 0.15) solid 1px;
   }
 }
 
