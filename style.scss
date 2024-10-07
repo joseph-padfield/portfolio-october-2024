@@ -4,6 +4,7 @@ $title-text-initial-color: rgba(90, 255, 0, 0);
 $inset-box-shadow-effect: 15px 15px 30px rgb(0, 0, 0) inset, -2px -2px 10px rgb(0, 0, 0) inset
 , -8px -8px 20px rgb(21, 21, 21);
 $title-container-background-color: rgba(35, 35, 35, 0.44);
+$box-width: 260px;
 
 html {
   box-sizing: border-box;
@@ -15,7 +16,7 @@ body {
   min-width: 375px;
   height: 100vh;
   margin: 0;
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 
 main {
@@ -36,16 +37,17 @@ nav {
 }
 
 .nav-container {
-  position: absolute;
-  top: 9rem;
-  z-index: 10;
+  //position: absolute;
+  //top: 9rem;
+  //z-index: 10;
   display: flex;
   flex-direction: row;
-  gap: 4rem;
+  justify-content: center;
+  gap: 2rem;
   background-color: $title-container-background-color;
   height: fit-content;
-  width: fit-content;
-  border-radius: 5px;
+  width: $box-width;
+  border-radius: 10px;
   box-shadow: $inset-box-shadow-effect;
   padding: 1rem;
 }
@@ -54,7 +56,7 @@ nav {
   font-family: "Andale Mono", monospace;
   color: $title-text-color;
   text-shadow: $title-text-glow 3px 3px 30px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   animation: glowing-links 2s forwards;
 }
 
@@ -64,8 +66,6 @@ nav {
 }
 
 .title-container {
-  position: absolute;
-  top: 40%;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -73,8 +73,7 @@ nav {
   justify-content: center;
   background-color: $title-container-background-color;
   height: fit-content;
-  width: fit-content;
-  min-wideth: 350px;
+  width: $box-width;
   border-radius: 5px;
   box-shadow: $inset-box-shadow-effect;
   padding: 1rem;
@@ -148,9 +147,39 @@ opacity: 1;
   }
 }
 
+.skills-list {
+  font-family: "Andale Mono", monospace;
+  color: white;
+  text-shadow: rgba(255, 255, 255, 0.52) 3px 3px 30px;
+  font-size: 0.8rem;
+  width: $box-width;
+  ul {
+  }
+}
+
+.icon-scroll-box {
+  //SCROLL EFFECT
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  width: $box-width;
+  overflow: hidden;
+  height: 4rem;
+  border-radius: 40px;
+  img {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: white;
+    box-shadow: 1px 1px 10px #ffffff;
+    padding: 0.2rem;
+    border-radius: 50%;
+  }
+}
+
 .project-container {
   position: absolute;
-  top: 10%;
+  top: 20%;
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -274,9 +303,9 @@ img {
 
 .social-links {
   display: flex;
-  gap: 3rem;
-  position: absolute;
-  bottom: 10rem;
+  gap: 4rem;
+  //position: absolute;
+  //bottom: 10rem;
   align-items: center;
 }
 
