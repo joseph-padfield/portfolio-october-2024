@@ -38,10 +38,10 @@ const projectHtml = `
         </div>
 `
 
-
+const projectContent = document.createElement('div')
 document.querySelector('.projects').addEventListener('click', () => {
-    const projectContent = document.createElement('div')
-    projectContent.innerHTML = ''
+
+    projectBox.innerHTML = ''
     projectContent.innerHTML = projectHtml
     projectBox.appendChild(closeButton)
     projectBox.appendChild(projectContent)
@@ -71,10 +71,12 @@ const about =  `<p>
 
 document.querySelector('.about').addEventListener('click', () => {
     // aboutBox.classList.toggle('animate-about-box')
-    projectBox.classList.toggle('animate-box')
+
     projectBox.innerHTML = ''
     projectBox.appendChild(closeButton)
     projectBox.appendChild(aboutText)
+
+    projectBox.classList.toggle('animate-box')
 })
 
 document.querySelector('.close-button').addEventListener('click', () => {
