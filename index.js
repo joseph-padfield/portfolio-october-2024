@@ -113,6 +113,7 @@ document.querySelector('.about').addEventListener('click', () => {
 
 document.querySelector('.close-button').addEventListener('click', () => {
     projectBox.classList.toggle('animate-box')
+    projectBox.innerHTML = ''
 
     projectImg.forEach(img => {  // Iterate over the NodeList
         img.classList.toggle('animate-img')
