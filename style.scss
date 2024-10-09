@@ -1,24 +1,31 @@
-$title-text-color: rgb(169, 181, 250);
-$title-text-glow: rgba(0, 32, 255, 0.32);
+$title-text-color: rgb(0, 187, 255);
+$title-text-glow: rgba(2, 250, 246, 0.75);
 $title-text-initial-color: rgba(90, 255, 0, 0);
 $inset-box-shadow-effect: 15px 15px 30px rgb(0, 0, 0) inset, -2px -2px 10px rgb(0, 0, 0) inset, -8px -8px 20px rgb(21, 21, 21);
 $title-container-background-color: rgba(35, 35, 35, 0.44);
 $box-width: 260px;
+$font: "Andale Mono", monospace;
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #0b0b0b;
   width: 100vw;
   min-width: 375px;
   height: 100vh;
   margin: 0;
-  padding: 2rem 0;
+}
+
+.background-container {
+  background-image: url("img/Gemini_Generated_Image_r16ftjr16ftjr16f.jpeg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
 main {
+  background-color: rgba(11, 11, 11, 0.93);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,21 +43,32 @@ nav {
 }
 
 nav {
+  .social-links {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    border: rgba(255, 255, 255, 0.45) 2px solid;
+    padding: 0.5rem 0.8rem;
+    border-radius: 10px;
 
-  img {
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.77);
-    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.55);
-    padding: 0.1rem;
-    border-radius: 50%;
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.55);
+      padding: 0.1rem;
+      border-radius: 50%;
+    }
+
+    img:hover {
+      background-color: rgb(255, 115, 0);
+      box-shadow: 1px 1px 10px rgb(243, 126, 9);
+      cursor: pointer;
+    }
   }
 }
 
 .nav-container {
-  //position: absolute;
-  //top: 9rem;
-  //z-index: 10;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -64,7 +82,7 @@ nav {
 }
 
 .nav-links {
-  font-family: "Andale Mono", monospace;
+  font-family: $font;
   color: $title-text-color;
   text-shadow: $title-text-glow 3px 3px 30px;
   font-size: 0.8rem;
@@ -92,7 +110,7 @@ nav {
 
 h1 {
   font-size: 1.1rem;
-  font-family: "Andale Mono", monospace;
+  font-family: $font;
   color: $title-text-color;
   text-shadow: $title-text-glow 3px 3px 30px;
   animation: glowing-text 5s forwards;
@@ -158,9 +176,8 @@ h1 {
   }
 }
 
-
 .skills-header {
-  font-family: "Andale Mono", monospace;
+  font-family: $font;
   color: white;
   text-shadow: rgba(255, 255, 255, 0.52) 3px 3px 30px;
   font-size: 0.8rem;
@@ -169,7 +186,6 @@ h1 {
 }
 
 .icon-scroll-box {
-  //SCROLL EFFECT
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -180,6 +196,7 @@ h1 {
   white-space: nowrap;
   background-color: $title-container-background-color;
   box-shadow: $inset-box-shadow-effect;
+  padding: 0.5rem 0;
 
   .icon-scroll-box-inner {
     display: flex;
@@ -191,13 +208,15 @@ h1 {
   }
 
   img {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.4rem;
+    height: 1.4rem;
     background-color: white;
     box-shadow: 1px 1px 10px #ffffff;
     padding: 0.2rem;
     border-radius: 50%;
   }
+
+
 }
 
 @keyframes scroll {
@@ -209,7 +228,6 @@ h1 {
   }
 }
 
-
 .project-container {
   position: absolute;
   top: 5%;
@@ -220,32 +238,25 @@ h1 {
   align-items: center;
   width: 300px;
   max-width: 400px;
-  height: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  overflow: hidden;
+  height: 90%;
+  background-color: rgba(8, 12, 8, 0.85);
+  overflow: scroll;
+  transition: height 1s ease-in-out;
 
-  p {
+  .about-text {
     color: #ffff93;
-    font-family: "Andale Mono", monospace;
+    font-family: $font;
     text-shadow: rgba(255, 255, 0, 0.61) 3px 3px 10px;
   }
 }
 
-.animate-box {
-  overflow: scroll;
-  animation: open-box 1s forwards;
+.close {
+  overflow: hidden;
+  height: 0
 }
 
-@keyframes open-box {
-  100% {
-    height: 90%;
-    padding: 0.5rem;
-    border: rgba(255, 255, 255, 0.15) solid 1px;
-  }
-}
-
-img {
-  height: 10rem;
+.project-img {
+  height: 8.5rem;
   width: 14rem;
   border: rgba(255, 255, 255, 0.17) solid 1px;
 }
@@ -253,9 +264,8 @@ img {
 .close-button {
   color: $title-text-color;
   text-shadow: $title-text-glow 3px 3px 30px;
-  font-family: "Andale Mono", monospace;
+  font-family: $font;
   margin: 0.2rem;
-  text-wrap: nowrap;
   width: 100%;
   text-align: end;
   text-decoration: underline;
@@ -272,114 +282,29 @@ img {
 .project {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   gap: 0.5rem;
+  width: 16rem;
+  height: fit-content;
 }
 
 .project-title {
   color: #ffff93;
-  font-family: "Andale Mono", monospace;
-  font-size: 1.2rem;
+  font-family: $font;
+  font-size: 0.8rem;
   text-shadow: rgba(255, 255, 0, 0.61) 3px 3px 10px;
 }
 
-.about-container {
-  position: absolute;
-  top: 10%;
-  z-index: 10;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 3rem;
-  justify-content: center;
-  align-items: flex-end;
-  width: 300px;
-  height: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  overflow: hidden;
-
-  p {
-    color: #ffff93;
-    font-family: "Andale Mono", monospace;
-    text-shadow: rgba(255, 255, 0, 0.61) 3px 3px 10px;
-  }
-
-  .box-header {
-    font-size: 1.5rem;
-  }
-}
-
-.animate-about-box {
-  overflow: scroll;
-  animation: open-about-box 1s forwards;
-}
-
-@keyframes open-about-box {
-  100% {
-    height: 75%;
-    padding: 0.5rem;
-    border: rgba(255, 255, 255, 0.15) solid 1px;
-  }
-}
-
-.close-about-button {
-  color: $title-text-color;
-  text-shadow: $title-text-glow 3px 3px 30px;
-  font-family: "Andale Mono", monospace;
-  margin: 0.2rem;
-  text-wrap: nowrap;
-  width: 100%;
-  text-align: end;
-  text-decoration: underline;
-  font-size: 0.7rem;
-  position: sticky;
-  top: 0.5rem;
-}
-
-.close-about-button:hover {
-  color: #ffff93;
-  text-shadow: yellow 3px 3px 30px;
-}
-
-.social-links {
-  display: flex;
-  gap: 4rem;
-  align-items: center;
-}
-
-
 @media (min-width: 700px) {
   .project-container {
-    position: absolute;
-    top: 5%;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
     width: 95%;
     max-width: 1000px;
-    height: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow: hidden;
-
-    p {
-      color: #ffff93;
-      font-family: "Andale Mono", monospace;
-      text-shadow: rgba(255, 255, 0, 0.61) 3px 3px 10px;
-    }
   }
 
   .close-button {
-    width: fit-content;
+    width: 100%;
     padding: 1rem 3rem 0 3rem;
-  }
-
-  .animate-box {
-    overflow: scroll;
-    animation: open-box 1s forwards;
-
   }
 
   .project-content {
@@ -396,11 +321,6 @@ img {
     height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     max-width: 400px;
-    margin: 0;
   }
 }
-
-
-
