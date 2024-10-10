@@ -87,13 +87,15 @@ const aboutText = document.createElement('p')
 aboutText.classList.add('about-text')
 aboutText.innerHTML = `<span class="box-header">About</span><br><br>
     I am a passionate and enthusiastic full-stack developer, recently graduated from an intensive training
-    program at iO Academy in Bath. After a rewarding 12-year career as an opera singer, and driven by a lifelong
-    love of technology, I decided to embark on a new career path in software development.<br><br>
+    program at iO Academy, in Bath. For 12 years I have enjoyed a successful and rewarding career as an opera singer, 
+    during which time I was fortunate enough to travel and work internationally with a broad range of theaters.[LEFT OFF HERE]
+    and driven by a lifelong
+    love of technology, and of learning, I decided to embark on a new career path in full-stack development.<br><br>
     During my time at iO Academy I worked on a range of projects, both independently and collaboratively
     within a scrum team using a broad range of technologies.<br><br>
-    Combining my skill-set from a long career in the performing arts with the skills and technologies that I
-    have learnt during my time at iO Academy has given me a unique approach to problem-solving and team-work
-    within this field, and I am excited to continue my learning and development as my career progresses.`
+    Combining my skill-set from a long career in the performing arts with what I have learnt during my time at iO 
+    Academy has given me a unique approach to problem-solving and team-work that I look forward to applying to my
+    future career.`
 
 document.querySelector('.about').addEventListener('click', () => {
 
