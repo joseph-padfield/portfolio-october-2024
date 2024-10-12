@@ -209,6 +209,23 @@ h1 {
     transform: translateX(-100%);
   }
 }
+.project-title {
+  color: #ffff93;
+  font-family: "Andale Mono", monospace;
+  font-size: 1rem;
+  text-shadow: rgba(255, 255, 0, 0.61) 3px 3px 10px;
+}
+
+.tools {
+  font-size: 0.8rem;
+  color: rgb(255, 115, 0);
+  text-shadow: 1px 1px 10px rgb(243, 126, 9);
+}
+
+.description {
+  font-size: 0.8rem;
+}
+
 .project-container {
   position: absolute;
   top: 5%;
@@ -228,6 +245,22 @@ h1 {
   color: #ffff93;
   font-family: "Andale Mono", monospace;
   text-shadow: rgba(255, 255, 0, 0.61) 3px 3px 10px;
+}
+
+.project-nav-links {
+  font-family: "Andale Mono", monospace;
+  color: rgb(255, 115, 0);
+  text-shadow: 1px 1px 10px rgb(243, 126, 9);
+  font-size: 0.8rem;
+}
+
+.project-nav-links:hover {
+  color: #ffff93;
+  text-shadow: yellow 3px 3px 30px;
+}
+
+.box-header {
+  font-size: 1.5rem;
 }
 
 .close {
@@ -262,18 +295,11 @@ h1 {
 .project {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   gap: 0.5rem;
   width: 16rem;
   height: fit-content;
-}
-
-.project-title {
-  color: #ffff93;
-  font-family: "Andale Mono", monospace;
-  font-size: 0.8rem;
-  text-shadow: rgba(255, 255, 0, 0.61) 3px 3px 10px;
 }
 
 @media (min-width: 700px) {
